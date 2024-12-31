@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 import os
 from langchain_groq import ChatGroq
-import asyncio
 
 # Load .env file
 load_dotenv()
