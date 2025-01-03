@@ -1,0 +1,64 @@
+> Entering new AgentExecutor chain...
+
+Invoking: `image_interpreting` with `{'image_path': '../data/images/Step2校外徵選.jpg'}`
+
+
+{'title': 'Step2. 校外徵選', 'sections': [{'title': 'Nomination', 'description': '校方提名', 'dates': ['第一學期：2月至3月', '第二學期：8月至9月']}, {'title': 'Application', 'description': '學生申請文件', 'description2': '申請文件及期程依各交換校規定辦理'}, {'title': 'Result', 'description': '結果通知', 'description2': '母校通知', 'description3': '交換校通知'}, {'title': '學生負責事項', 'description': '包含住宿、簽證、交通、保險、健康檢查，限制提領帳戶...等(依各交換校及所在國家規定)'}], 'button': {'text': '看詳細資訊', 'color': 'orange'}}根據圖片的內容，學生在校方提名之後，需要進行申請文件的準備，依照各交換校的規定進行辦理。此外，學生也需要負責一些事項，包括住宿、簽證、交通、保險、健康檢查等，詳情請參閱詳細資訊。
+
+> Finished chain.
+
+{'input': "'../data/images/Step2校外徵選.jpg' 請問在校方提名之後，學生要做什麼？",
+ 'output': '根據圖片的內容，學生在校方提名之後，需要進行申請文件的準備，依照各交換校的規定進行辦理。此外，學生也需要負責一些事項，包括住宿、簽證、交通、保險、健康檢查等，詳情請參閱詳細資訊。'}
+
+
+=====
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `image_interpreting` with `{'image_path': '../data/images/Step2校外徵選.jpg'}`
+
+
+{'title': 'Step2. 校外徵選', 'sections': [{'title': 'Nomination', 'description': '校方提名', 'dates': ['第一學期：2月至3月', '第二學期：8月至9月']}, {'title': 'Application', 'description': '學生申請文件', 'description2': '申請文件及期程依各交換校規定辦理'}, {'title': 'Result', 'description': '結果通知', 'description2': '母校通知', 'description3': '交換校通知'}, {'title': '學生負責事項', 'description': '包含住宿、簽證、交通、保險、健康檢查，限制提領帳戶...等(依各交換校及所在國家規定)'}], 'button': {'text': '看詳細資訊', 'color': 'orange'}}根據圖片的內容，校方提名的第一學期是2月至3月。
+
+> Finished chain.
+
+{'input': "'../data/images/Step2校外徵選.jpg' 請問校方提名的第一學期是幾月至幾月？",
+ 'output': '根據圖片的內容，校方提名的第一學期是2月至3月。'}
+
+
+=====
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `image_interpreting` with `{'image_path': '../data/images/Step2校外徵選.jpg'}`
+
+
+{'title': 'Step2. 校外徵選', 'sections': [{'title': 'Nomination', 'description': '校方提名', 'dates': ['第一學期：2月至3月', '第二學期：8月至9月']}, {'title': 'Application', 'description': '學生申請文件', 'description2': '申請文件及期程依各交換校規定辦理'}, {'title': 'Result', 'description': '結果通知', 'description2': '母校通知', 'description3': '交換校通知'}, {'title': '學生負責事項', 'description': '包含住宿、簽證、交通、保險、健康檢查，限制提領帳戶...等(依各交換校及所在國家規定)'}], 'button': {'text': '看詳細資訊', 'color': 'orange'}}
+Invoking: `document_retrieval` with `{'string': '學生負責事項有哪些'}`
+
+
+
+1. 繳交文件
+2. 聯絡交換學校
+學生負責事項包含：
+1. 繳交文件
+2. 聯絡交換學校
+3. 安排住宿
+4. 辦理簽證
+5. 安排交通
+6. 投保保險
+7. 健康檢查
+8. 限制提領帳戶...等（依各交換校及所在國家規定）
+
+> Finished chain.
+
+{'input': '\n\'../data/images/Step2校外徵選.jpg\'\nRecommend using tool "image_interpreting" to interpret, explain or analyse the content and underlying logic of any given image and return in JSON format.\nIf information in the image isn\'t clear and informative enough to answer the Human\'s message below, you MUST use the powerful tool "document_retrieval" to retrieve relevant information from the robust document database using \'Human\'s message\' below.\n\nHuman\'s message:\n"學生負責事項有哪些？"\n',
+ 'output': '學生負責事項包含：\n1. 繳交文件\n2. 聯絡交換學校\n3. 安排住宿\n4. 辦理簽證\n5. 安排交通\n6. 投保保險\n7. 健康檢查\n8. 限制提領帳戶...等（依各交換校及所在國家規定）'}
+
+
+=====
+
+
+

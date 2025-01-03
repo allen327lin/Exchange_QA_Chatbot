@@ -1,0 +1,41 @@
+{
+   "title": "Step 2. 校外徵選",
+   "sections": [
+       {
+           "title": "校方提名",
+           "subsections": [
+               {
+                   "title": "Nomination",
+                   "text": "第一學期：2月至3月 第二學期：8月至9月"
+               }
+           ]
+       },
+       {
+           "title": "學生申請徵件",
+           "subsections": [
+               {
+                   "title": "Application",
+                   "text": "申請文件及期程依各交換校規定辦理"
+               }
+           ]
+       },
+       {
+           "title": "結果通知",
+           "subsections": [
+               {
+                   "title": "Result",
+                   "text": "1.通過：收到入學許可，學生辦理後續流程 2.未通過：請至國際事務處討論"
+               }
+           ]
+       },
+       {
+           "title": "學生負責事項",
+           "subsections": [
+               {
+                   "title": "",
+                   "text": "包含住宿、簽證、交通、保險、健檢查，限制提領帳戶...等（依各交換校及所在國家規定）"
+               }
+           ]
+       }
+   ]
+}
