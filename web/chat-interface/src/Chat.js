@@ -4,15 +4,16 @@ import "./Chat.css";
 const Chat = () => {
   const [messages, setMessages] = useState([]); // 儲存訊息
   const [input, setInput] = useState(""); // 儲存輸入框內容
+  const [isLoading, setIsLoading] = useState(false); // 儲存是否正在載入
 
   // 送出訊息
   const sendMessage = async () => {
     if (input.trim()) {
       // 顯示用戶輸入
       setMessages([...messages, { text: input, sender: "You" }]);
-      setInput(""); // 清空輸入框
 
       try {
+        setIsLoading(true); // 開始載入
         const response = await fetch("http://localhost:5002/api/agent", {
           method: "POST",
           headers: {
@@ -26,7 +27,7 @@ const Chat = () => {
           const fullResponse = data.response;
 
           // 使用正則表達式或 substring 提取 "Final response:" 之後的部分
-          const finalResponse = fullResponse.match(/Final response:\s*(.*)/);
+          const finalResponse = fullResponse.match(/Final response:\s*(.*)/s);
 
           // 如果找到了 Final response 的部分
           if (finalResponse && finalResponse[1]) {
@@ -53,7 +54,11 @@ const Chat = () => {
           ...prevMessages,
           { text: "Unable to reach the server.", sender: "Bot" },
         ]);
+      } finally {
+        setIsLoading(false); // 完成載入
       }
+
+      setInput(""); // 清空輸入框
     }
   };
 
@@ -72,6 +77,11 @@ const Chat = () => {
             {msg.text}
           </div>
         ))}
+        {isLoading && (
+          <div className="chat-message bot">
+            <span>Bot: </span>正在處理中...
+          </div>
+        )}
       </div>
       <div className="chat-input">
         <input
