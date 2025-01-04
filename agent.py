@@ -136,10 +136,10 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False, max_iter
 # =======================================================
 # =======================================================
 
-async def agent(user_prompt: str, image_path: str = "None") -> str:
+async def agent(user_prompt: str, image_path: str = "") -> str:
     response = ""
 
-    if image_path != "None":
+    if image_path != "":
         prompt = f"""
 '{image_path}'
 Recommend using tool "image_interpreting" to interpret, explain or analyse the content and underlying logic of any given image and return in JSON format.
@@ -202,14 +202,15 @@ Human's message:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("user_prompt", type=str, help="Prompt sent to LLM")
+    parser.add_argument("user_prompt", type=str, help="Prompt sent to the LLM Agent")
+    parser.add_argument("-i", "--image_path", type=str, default="", help="The relative path of image sent to the LLM Agent")
     args = parser.parse_args()
 
     user_prompt = args.user_prompt
-    print(f"\nuser_prompt:\n{user_prompt}\n")
     # user_prompt = "校內媒合公告預計會在何時公布？"
+    print(f"\nUser prompt:\n{user_prompt}\n")
 
-    response = asyncio.run(agent(user_prompt))
+    response = asyncio.run(agent(user_prompt, args.image_path))
     print(f"\nFinal response:\n{response}\n")
 
 
