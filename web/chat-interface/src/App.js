@@ -45,13 +45,6 @@ function App() {
           onLoad={handleIframeLoad}
         />
       </div>
-
-      {/* 顯示點擊的連結 */}
-      {/*{clickedLink && (*/}
-      {/*  <div className="clicked-link">*/}
-      {/*    <p>Clicked Link: <a href={clickedLink} target="_blank" rel="noopener noreferrer">{clickedLink}</a></p>*/}
-      {/*  </div>*/}
-      {/*)}*/}
     </div>
   );
 }

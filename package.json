@@ -2,5 +2,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "web-vitals": "^4.2.4"
+  },
+  "dependencies": {
+    "http-proxy-middleware": "^3.0.3"
   }
 }
