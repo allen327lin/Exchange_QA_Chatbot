@@ -13,6 +13,7 @@ import chromadb
 import base64
 import json
 import asyncio
+import argparse
 
 # =======================================================
 # =======================================================
@@ -135,9 +136,28 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False, max_iter
 # =======================================================
 # =======================================================
 
-async def agent(prompt: str) -> str:
+async def agent(user_prompt: str, image_path: str = "") -> str:
     response = ""
+
+    if image_path != "":
+        prompt = f"""
+'{image_path}'
+Recommend using tool "image_interpreting" to interpret, explain or analyse the content and underlying logic of any given image and return in JSON format.
+If information in the image isn't informative enough to answer the Human's message below, you could use the powerful tool "document_retrieval" to retrieve relevant information STRICTLY ONLY ONCE from the robust document database using 'Human's message' below.
+
+Human's message:
+{user_prompt}
+"""
+    else:
+        prompt = f"""
+IMPORTANT: Use the powerful "document_retrieval" tool to search for information STRICTLY ONLY TWICE, NO MORE, and then respond to the human's message in Traditional Chinese or English.
+
+Human's message:
+{user_prompt}
+"""
+        
     print(f"\nStart streaming response:\n=====\n")
+
     async for event in agent_executor.astream_events(
         {"input": prompt}, version="v1"
     ):
@@ -173,6 +193,7 @@ async def agent(prompt: str) -> str:
             # print(f"Tool output was: {event['data'].get('output')}")
             # print("--")
             pass
+
     print(f"\n=====\nResponse ends.\n")
     return response
 
@@ -180,13 +201,16 @@ async def agent(prompt: str) -> str:
 # =======================================================
 
 if __name__ == "__main__":
-    user_prompt = f"""
-IMPORTANT: Use the powerful "document_retrieval" tool to search for information STRICTLY ONLY TWICE, NO MORE, and then respond to the human's message in Traditional Chinese or English.
+    parser = argparse.ArgumentParser()
+    parser.add_argument("user_prompt", type=str, help="Prompt sent to the LLM Agent")
+    parser.add_argument("-i", "--image_path", type=str, default="", help="The relative path of image sent to the LLM Agent")
+    args = parser.parse_args()
 
-Human's message:
-校內媒合公告預計會在何時公布？
-"""
-    response = asyncio.run(agent(user_prompt))
+    user_prompt = args.user_prompt
+    # user_prompt = "校內媒合公告預計會在何時公布？"
+    print(f"\nUser prompt:\n{user_prompt}\n")
+
+    response = asyncio.run(agent(user_prompt, args.image_path))
     print(f"\nFinal response:\n{response}\n")
 
 
