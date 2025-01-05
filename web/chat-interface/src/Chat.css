@@ -12,7 +12,7 @@
 }
 
 .chat-header {
-  background-color: #4caf50;
+  background-color: #2c4251;
   color: white;
   padding: 10px;
   text-align: center;
@@ -23,30 +23,58 @@
   flex: 1;
   padding: 10px;
   overflow-y: auto;
-  background-color: #f9f9f9;
+  background-color: #c1c1c1;
 }
 
 .chat-message {
   margin-bottom: 10px;
   padding: 8px;
   border-radius: 8px;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 .chat-message.self {
-  align-self: flex-end;
-  background-color: #e1f5fe;
+  align-self: flex-start;
+  background-color: #D9F0FF;
+  margin-left: auto;
+  padding: 10px;
+  text-align: right;
 }
 
 .chat-message.other {
   align-self: flex-start;
-  background-color: #fff59d;
+  background-color: #ECD6CB;
+  padding: 10px;
+}
+
+.chat-message-bot {
+  align-self: flex-start;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.sender{
+  color: #2c4251;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .chat-input {
   display: flex;
+  flex-direction: column;
   padding: 10px;
   border-top: 1px solid #ccc;
+  gap: 15px;
+}
+
+.prompt-input{
+  margin-left: 10px;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
 }
 
 .chat-input input {
@@ -57,10 +85,11 @@
   font-size: 1em;
 }
 
-.chat-input button {
-  margin-left: 10px;
+.send-button {
+  max-width: 15%;
+  margin-left: 20px;
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #2c4251;
   color: white;
   border: none;
   border-radius: 4px;
@@ -68,6 +97,65 @@
   font-size: 1em;
 }
 
-.chat-input button:hover {
+.send-button:hover {
   background-color: #45a049;
+}
+
+
+.chat-image {
+  max-width: 90%;
+  border-radius: 8px;
+  margin-top: 5px;
+  object-fit: contain;
+}
+
+.image-upload{
+  margin-left: 10px;
+  max-width: 100%;
+}
+
+.image-preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.preview-image {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  max-width: 20vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.remove-image {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 3px;
+  background-color: #DB4955;
+  color: #505050;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 80%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.remove-image:hover {
+  background-color: darkred;
+}
+
+.image {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt{
+  display: flex;
 }
