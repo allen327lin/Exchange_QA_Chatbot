@@ -157,17 +157,17 @@ async def agent(user_prompt: str, image_path: str = "") -> str:
     # 有圖的時候
     if image_path != "":
         prompt = f"""
-'{image_path}'
-
 Available tools:
 1. 'image_interpreting'
 2. 'exchange_schools_searching'
 3. 'document_retrieval'
 Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
 
-Please respond to the Human's message in Traditional Chinese with numbered or bulleted list when possible.
+Please respond to the Human's message in Traditional Chinese.
+Please display items with numbered or bulleted list when possible.
 
 Human's message:
+Please refer to this image: '{image_path}'
 {user_prompt}
 """
     # 沒有圖的時候
@@ -178,7 +178,8 @@ Available tools:
 2. 'document_retrieval'
 Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
 
-Please respond to the Human's message in Traditional Chinese with numbered or bulleted list when possible.
+Please respond to the Human's message in Traditional Chinese.
+Please display items with numbered or bulleted list when possible.
 
 Human's message:
 {user_prompt}
