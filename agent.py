@@ -110,7 +110,22 @@ def document_retrieval(string: str) -> str:
     )
     return str(result["documents"][0])
 
-tools = [image_interpreting, document_retrieval]
+@tool
+def exchange_schools_searching(string: str) -> str:
+    """A tool for searching exchange schools in Europe, Asia, the Americas, and Oceania.
+The input parameter must be one of these Traditional Chinese strings: '歐洲', '亞洲', '美洲', or '大洋洲'.
+This tool returns a JSON object containing all available exchange schools in the listed countries.
+
+    Args:
+        string: '歐洲', '亞洲', '美洲' or '大洋洲'
+    """
+    global project_root
+    json_file = project_root / f"data/school_list/{string}.json"
+    with open(json_file, 'r') as file:
+        data = json.load(file)
+    return str(data)
+
+tools = [image_interpreting, document_retrieval, exchange_schools_searching]
 
 # =======================================================
 # =======================================================
@@ -139,18 +154,31 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False, max_iter
 async def agent(user_prompt: str, image_path: str = "") -> str:
     response = ""
 
+    # 有圖的時候
     if image_path != "":
         prompt = f"""
 '{image_path}'
-Recommend using tool "image_interpreting" to interpret, explain or analyse the content and underlying logic of any given image and return in JSON format.
-If information in the image isn't informative enough to answer the Human's message below, you could use the powerful tool "document_retrieval" to retrieve relevant information STRICTLY ONLY ONCE from the robust document database using 'Human's message' below.
+
+Available tools:
+1. 'image_interpreting'
+2. 'exchange_schools_searching'
+3. 'document_retrieval'
+Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
+
+Please respond to the Human's message in Traditional Chinese with numbered or bulleted list when possible.
 
 Human's message:
 {user_prompt}
 """
+    # 沒有圖的時候
     else:
         prompt = f"""
-IMPORTANT: Use the powerful "document_retrieval" tool to search for information STRICTLY ONLY TWICE, NO MORE, and then respond to the human's message in Traditional Chinese or English.
+Available tools:
+1. 'exchange_schools_searching'
+2. 'document_retrieval'
+Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
+
+Please respond to the Human's message in Traditional Chinese with numbered or bulleted list when possible.
 
 Human's message:
 {user_prompt}
