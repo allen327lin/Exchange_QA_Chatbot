@@ -161,10 +161,11 @@ Available tools:
 1. 'image_interpreting'
 2. 'exchange_schools_searching'
 3. 'document_retrieval'
-Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
+Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN ONCE.
 
-Please respond to the Human's message in Traditional Chinese.
-Please display items with numbered or bulleted list when possible.
+Please use the 'image_interpreting' tool and the 'document_retrieval' tool simultaneously.
+Please respond to the Human's message more specifically in Traditional Chinese.
+When there are multiple items to list, please use a numbered list or a bulleted list to display them.
 
 Human's message:
 Please refer to this image: '{image_path}'
@@ -178,8 +179,8 @@ Available tools:
 2. 'document_retrieval'
 Note: Use 'document_retrieval' tool STRICTLY NO MORE THAN TWICE.
 
-Please respond to the Human's message in Traditional Chinese.
-Please display items with numbered or bulleted list when possible.
+Please respond to the Human's message more specifically in Traditional Chinese.
+When there are multiple items to list, please use a numbered list or a bulleted list to display them.
 
 Human's message:
 {user_prompt}
