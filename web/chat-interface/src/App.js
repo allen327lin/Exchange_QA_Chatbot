@@ -6,11 +6,9 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      {/* 左側聊天介面 */}
       <div className="left-panel">
         <Chat />
       </div>
-      {/* 右側嵌入網頁 */}
       <div className="right-panel">
         <NTUT_web />
       </div>
