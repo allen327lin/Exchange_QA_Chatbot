@@ -169,15 +169,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+# Custom ignore
 ./web/chat-interface/src/temp/
 ./web/chat-interface/src/vector_db/
 
-
-
-
-
-
-
-
 **.DS_Store
 .temp/
+test_scripts/
