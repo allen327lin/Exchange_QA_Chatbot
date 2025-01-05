@@ -143,7 +143,7 @@ const Chat = () => {
 
     return (
         <div className="chat-container">
-            <div className="chat-header">Chat Room</div>
+            <div className="chat-header">交換生 QA Chatbot</div>
             <div className="chat-messages">
                 {messages.map((msg, index) => (
                     <div key={index} className={`chat-message ${msg.sender === "You" ? "self" : "other"}`}>
@@ -191,7 +191,7 @@ const Chat = () => {
                         onChange={(e) => setInput(e.target.value)}
                         onKeyPress={handleKeyPress}
                         onPaste={handlePaste}
-                        placeholder="Type a message..."
+                        placeholder="請輸入訊息或貼上圖片..."
                     />
                     <button className={"send-button"}
                             onClick={sendMessage}>Send
