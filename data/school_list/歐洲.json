@@ -1,0 +1,286 @@
+{
+    "英國": [
+        {
+            "University of the West of England（UWE）": {}
+        },
+        {
+            "Ulster University": {}
+        }
+    ],
+    "愛爾蘭": [
+        {
+            "Institute of Technology, Sligo (ATU Sligo)": {}
+        }
+    ],
+    "荷蘭": [
+        {
+            "Hanze University of Applied Sciences Groningen": {}
+        },
+        {
+            "The Hague University of Applied Sciences": {}
+        },
+        {
+            "Amsterdam University of Applied Sciences": {}
+        },
+        {
+            "Rotterdam University of Applied Sciences": {}
+        },
+        {
+            "University of Twente": {}
+        }
+    ],
+    "德國": [
+        {
+            "Karlsruhe University of Applied Sciences": {}
+        },
+        {
+            "Trier University of Applied Science": {}
+        },
+        {
+            "Offenburg University of Applied Sciences": {}
+        },
+        {
+            "University of Applied Sciences Potsdam": {}
+        },
+        {
+            "FHWS, University of Applied Sciences Würzburg-Schweinfurt": {}
+        },
+        {
+            "Zwickau University of Applied Sciences": {}
+        },
+        {
+            "Albstadt-Sigmaringen University": {}
+        },
+        {
+            "The University of Bamberg": {}
+        },
+        {
+            "weißensee Academy of Art Berlin": {}
+        },
+        {
+            "Aschaffenburg University of Applied Sciences": {}
+        },
+        {
+            "Aachen University of Applied Sciences": {}
+        },
+        {
+            "Darmstadt University of Applied Sciences": {}
+        },
+        {
+            "Berlin University of Applied Sciences (HTW Berlin)": {}
+        },
+        {
+            "Cologne Business School": {}
+        },
+        {
+            "Dresden University of Applied Sciences": {}
+        },
+        {
+            "Esslingen University of Applied Sciences": {}
+        },
+        {
+            "Technische Universitat Ilmenau (TU IL)": {}
+        },
+        {
+            "Hamburg University of Technology (TUHH)": {}
+        },
+        {
+            "Münster University of Technology": {}
+        }
+    ],
+    "瑞士": [
+        {
+            "Zurich University of Applied Sciences, School of Engineering": {}
+        },
+        {
+            "OST Eastern Switzerland University of Applied Sciences": {}
+        }
+    ],
+    "法國": [
+        {
+            "ESIEE Paris": {}
+        },
+        {
+            "Institut Polytechnique des Sciences Avancées (IPSA)": {}
+        },
+        {
+            "Institut Sup'Biotech de Paris": {}
+        },
+        {
+            "SIGMA Clermont": {}
+        },
+        {
+            "Ecole nationale supérieure d'architecture de Paris-Belleville (E.N.S.A.P.B)": {}
+        },
+        {
+            "ESTIA": {}
+        },
+        {
+            "EPITECH": {}
+        },
+        {
+            "CESI Ecole d’ingénieurs": {}
+        },
+        {
+            "EPF Graduate School of Engineering": {}
+        },
+        {
+            "Ecole Nationale Supérieure de Chimie de Lille (ENSCL)": {}
+        },
+        {
+            "IAE Montpellier | Ecole University of Management": {}
+        }
+    ],
+    "安道爾": [
+        {
+            "Universitat d'Andorra": {}
+        }
+    ],
+    "瑞典": [
+        {
+            "Chalmers University of Technology": {}
+        },
+        {
+            "Halmstad University": {}
+        }
+    ],
+    "丹麥": [
+        {
+            "University of Southern Denmark": {}
+        },
+        {
+            "IT University of Copenhagen": {}
+        }
+    ],
+    "芬蘭": [
+        {
+            "Lappeenranta University of Technology(LUT)": {}
+        }
+    ],
+    "比利時": [
+        {
+            "University of Liège": {}
+        },
+        {
+            "University of Mons": {}
+        }
+    ],
+    "羅馬尼亞": [
+        {
+            "West University of Timisoara": {}
+        }
+    ],
+    "捷克": [
+        {
+            "Czech Technical University in Prague": {}
+        },
+        {
+            "Tomas Bata University in Zlin": {}
+        },
+        {
+            "Technical University of Liberec": {}
+        },
+        {
+            "VSB – Technical University of Ostrava": {}
+        },
+        {
+            "University of Chemistry and Technology, Prague": {}
+        },
+        {
+            "University of West Bohemia": {}
+        }
+    ],
+    "匈牙利": [
+        {
+            "BME - Budapest University of Technology and Economics": {}
+        }
+    ],
+    "波蘭": [
+        {
+            "Warsaw University of Technology": {}
+        }
+    ],
+    "立陶宛": [
+        {
+            "Vilnius University": {}
+        },
+        {
+            "Vilnius Gediminas Technical University (VGTU)": {}
+        }
+    ],
+    "拉脫維亞": [
+        {
+            "Riga Technical University": {}
+        }
+    ],
+    "愛沙尼亞": [
+        {
+            "Tallinn University of Technology": {}
+        }
+    ],
+    "義大利": [
+        {
+            "University of Pavia": {}
+        },
+        {
+            "University of International Studies of Rome (UNINT)": {}
+        },
+        {
+            "University of Verona": {}
+        }
+    ],
+    "西班牙": [
+        {
+            "UNIVERSITAT JAUME I": {}
+        },
+        {
+            "Universidad de Las Palmas de Gran Canaria (ULPGC)": {}
+        },
+        {
+            "Universitat Politècnica de València (UPV)": {}
+        },
+        {
+            "Universitat Internacional de Catalunya": {}
+        },
+        {
+            "Universitat Internacional de Catalunya (UIC Barcelona)": {}
+        }
+    ],
+    "葡萄牙": [
+        {
+            "University Institute of Lisbon (ISCTE-IUL)": {}
+        }
+    ],
+    "奧地利": [
+        {
+            "TU Wien": {}
+        },
+        {
+            "University of Applied Sciences Technikum Wien": {}
+        },
+        {
+            "Vorarlberg University of Applied Sciences": {}
+        },
+        {
+            "The MCI Management Center Innsbruck": {}
+        },
+        {
+            "University of Applied Sciences - Fachhochschule Kufstein FH Tirol": {}
+        },
+        {
+            "University of Applied Science Upper Austria": {}
+        },
+        {
+            "University of Applied Sciences for Management and Communication": {}
+        },
+        {
+            "Salzburg University of Applied Sciences": {}
+        },
+        {
+            "Graz University of Technology (TU Graz)": {}
+        },
+        {
+            "Montanuniversität Leoben": {}
+        }
+    ]
+}

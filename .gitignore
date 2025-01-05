@@ -169,6 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+./web/chat-interface/src/temp/
+./web/chat-interface/src/vector_db/
 
 
 
@@ -178,3 +180,4 @@ cython_debug/
 
 
 **.DS_Store
+.temp/
