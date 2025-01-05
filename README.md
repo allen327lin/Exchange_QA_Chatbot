@@ -6,7 +6,4 @@ A LLM Application to Facilitate Students' Outbound Exchange Application Process
 
 ## Quick start
 1. `python3 prepare_vector_db.py`
-2. `python3 agent.py`
-
-## Call LLM agent
-Call function `agent(prompt: str)` in `agent.py`, and it will return the response in string.
+2. `python3 agent.py "Please introduce yourself."`
