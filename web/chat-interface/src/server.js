@@ -7,7 +7,10 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors()); // 啟用 CORS
-app.use(express.json());
+// app.use(express.json());
+
+app.use(express.json({ limit: '50mb' }));  // 將限制提高到 50MB 或更高
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 app.post('/api/agent', (req, res) => {
     const prompt = req.body.prompt; // 取得前端傳過來的 prompt
