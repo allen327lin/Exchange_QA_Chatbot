@@ -57,15 +57,22 @@ const Chat = () => {
             if (response.ok) {
                 const data = await response.json();
                 const fullResponse = data.response;
+
+                // 匹配 Final response 部分
                 const finalResponse = fullResponse.match(/Final response:\s*(.*)/s);
 
+                // 取得 final response
                 const botMessage = finalResponse
                     ? finalResponse[1].trim()
                     : "No final response found.";
 
+                // 將換行符號 (\n) 轉換為 <br> 標籤，以便顯示空行
+                const messageWithBreaks = botMessage.replace(/\n/g, "<br/>");
+
+                // 更新狀態，將處理過的訊息顯示到聊天界面
                 setMessages((prevMessages) => [
                     ...prevMessages,
-                    {text: botMessage, sender: "Bot"},
+                    {text: messageWithBreaks, sender: "Bot"},
                 ]);
             } else {
                 console.error("Server error:", response.status);
@@ -130,6 +137,10 @@ const Chat = () => {
         if (e.key === "Enter") sendMessage();
     };
 
+    const formatMessage = (message) => {
+        return message.replace(/\n/g, "<br/>");
+    };
+
     return (
         <div className="chat-container">
             <div className="chat-header">Chat Room</div>
@@ -139,7 +150,12 @@ const Chat = () => {
                         <div className="sender">{msg.sender}</div>
                         {/* Move this outside for independent styling */}
                         <div className="message-content">
-                            <div>{msg.text}</div>
+                            <div
+                                dangerouslySetInnerHTML={{
+                                    __html: formatMessage(msg.text),
+                                }}
+                            />
+                            {/*<div>{msg.text}</div>*/}
                             {msg.file && (
                                 <img
                                     src={msg.file.previewURL || `data:image/png;base64,${msg.file}`}

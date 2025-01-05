@@ -71,7 +71,8 @@ function executePythonScript(prompt, imagePath, res) {
 
     pythonProcess.on('close', (code) => {
         if (code === 0) {
-            res.json({ response: response.toString() }); // 返回回應給前端
+            res.json({ response: response }); // 返回回應給前端
+            console.log(response)
         } else {
             console.error('Python script execution failed with code:', code);
             res.status(500).send('Error executing Python script');
