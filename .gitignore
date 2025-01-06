@@ -171,9 +171,9 @@ cython_debug/
 .pypirc
 
 
+
 # Custom ignore
-./web/chat-interface/src/temp/
-./web/chat-interface/src/vector_db/
+./web/chat-interface/src/temp
 
 **.DS_Store
 .temp
