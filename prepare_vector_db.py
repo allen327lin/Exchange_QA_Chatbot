@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+import shutil
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
@@ -68,8 +69,17 @@ def prepare_vector_db():
     pdf_files = [f"{DOCUMENTS_FOLDER}/{pdf_file_path}" for pdf_file_path in os.listdir(DOCUMENTS_FOLDER)]
 
     for pdf_file in pdf_files:
-        print(f"\nProcessing: {Path(pdf_file).name}\n")
-        embed_pdf(pdf_file)
+        if Path(pdf_file).suffix == ".pdf":
+            print(f"\nProcessing: {Path(pdf_file).name}\n")
+            embed_pdf(pdf_file)
+        else:
+            pass
+
+    # 把 vector_db 同步到 web 需要的 vector_db
+    vector_db_for_web_path = project_root / "web/chat-interface/src/vector_db"
+    if vector_db_for_web_path.exists():
+        shutil.rmtree(str(vector_db_for_web_path))
+    shutil.copytree("vector_db", vector_db_for_web_path)
     
     print("\nAll documents processed and stored in ChromaDB.\n")
 

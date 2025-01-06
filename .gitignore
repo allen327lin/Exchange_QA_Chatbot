@@ -176,5 +176,5 @@ cython_debug/
 ./web/chat-interface/src/vector_db/
 
 **.DS_Store
-.temp/
-test_scripts/
+.temp
+test_scripts
