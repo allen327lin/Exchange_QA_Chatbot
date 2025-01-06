@@ -15,10 +15,10 @@ A LLM Application to Facilitate Students' Outbound Exchange Application Process
 2. `npm install`
 
 ## Launch Web UI
->### Terminal #1
->1. `cd Exchange_QA_Chatbot/web/chat-interface/src`
->2. `npx nodemon server.js`
+### Terminal #1
+1. `cd Exchange_QA_Chatbot/web/chat-interface/src`
+2. `npx nodemon server.js`
 
->### Terminal #2
->1. `cd Exchange_QA_Chatbot/web/chat-interface/src`
->2. `npm start`
+### Terminal #2
+1. `cd Exchange_QA_Chatbot/web/chat-interface/src`
+2. `npm start`
