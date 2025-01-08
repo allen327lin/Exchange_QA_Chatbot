@@ -1,6 +1,12 @@
 # Exchange_QA_Chatbot
 A LLM Application to Facilitate Students' Outbound Exchange Application Process
 
+## Demo
+[![Demo video link](.thumbnail/thumbnail.jpg)](https://youtu.be/xfrowgOi1gE)
+
+## App Flowchart
+![.flowchart/flowchart.png](.flowchart/flowchart.png)
+
 ## Quick installation
 1. `cd Exchange_QA_Chatbot`
 2. `pip install -r requirements.txt`
@@ -22,6 +28,3 @@ A LLM Application to Facilitate Students' Outbound Exchange Application Process
 ### Terminal #2
 1. `cd Exchange_QA_Chatbot/web/chat-interface/src`
 2. `npm start`
-
-## Demo
-[![Demo video link](.thumbnail/thumbnail.jpg)](https://youtu.be/xfrowgOi1gE)
